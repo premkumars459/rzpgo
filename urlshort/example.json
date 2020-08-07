@@ -1,0 +1,14 @@
+[
+    { 
+        "path" : "/iwantrazorpay" , 
+        "url": "https://razorpay.com"
+    },
+    { 
+        "path" : "/iwantnetflix" , 
+        "url": "https://netflix.com/in/"
+    },
+    { 
+        "path" : "/iwantgoogle" , 
+        "url": "https://google.com"
+    }
+]
