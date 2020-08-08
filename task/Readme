@@ -1,0 +1,7 @@
+The following commands are supported by the main command task :
+
+1. add : It adds a task to your "To Do" list 
+2. list : It shows all the tasks yet to be completed.
+3. do : It marks the tasks completed and removes it from the "To Do list".
+4. completed : It shows all the tasks completed today (from the start of the day until the time this command was called). 
+
