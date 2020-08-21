@@ -1,0 +1,23 @@
+Setup : 
+1. Copy the "uptime" folder to go/src/github.com/ (in case you want to run on any other path make sure the go path is setup and change the paths in the import statement accordingly
+
+2. make Mysql database (preferably with name uptimeurls otherwise update this as well in next step)
+
+3. update the root, password of the mysql and the port running on which mysql is running in two places :
+              1) main.go:40
+              2) db/database.go:18
+              
+
+About The Application :
+
+1. On starting the application it will create a table in the database if not created that will hold your urls and associated details. 
+2. You can perform various requests like POST, GET, PATCH, DELETE
+3. POST /urls/                  Add a new url to your database with paramaeters of your choice via form body else default parameters are al ready set.
+4. GET /urls/:id                Retrieve details of a url with id = "id".
+5. PATCH /urls/:id              Update url with id "id". details about variables can be submited via a form. failure count sets to 0 after a this request.]
+6. POST /urls/:id/activate      To start crawling a deactivated url. Throws error in case of already activated url.
+7. POST /urls/:id/deactivate    To stop crawling an activated url. Throws error in case of already deactivated url.
+8. DELETE /urls/:id             Stops crawling through the url assiciated with the id and deletes the url from the database.
+
+
+
