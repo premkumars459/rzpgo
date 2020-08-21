@@ -29,9 +29,9 @@ func CheckURL(url string, crawlTime int, frequency int, failureCount int, failur
 
 		mytimer := time.NewTimer(time.Duration(frequency) * time.Second)
 		client := http.Client{
-			Timeout: 5 * time.Second,
+			Timeout: time.Duration(crawlTime ) * time.Second,
 		}
-		crawlTime = 1
+		//crawlTime = 1
 		//fmt.Println("starting")
 		resp, err := client.Get(url)
 		if err != nil {
